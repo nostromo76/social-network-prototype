@@ -1,3 +1,4 @@
+
 class BasePage  {
     constructor(driver) {
         this.driver = driver
@@ -7,13 +8,17 @@ class BasePage  {
 
     }
     async getTitle() {
-        return this.driver.getTitle();
+        return await  this.driver.getTitle();
     }
 
-    async findByCss(cssSelector) {
-        return this.driver.findElement(By.css(cssSelector));
-    }
-
+    async find(locator) {
+        return this.driver.findElement(locator);
+      }
+      async click(locator) {
+        // await (await this.find(locator)).click()
+        const el = await this.find(locator);
+        await el.click();
+      }
 
 
 
