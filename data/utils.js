@@ -4,6 +4,7 @@ const utils = {
     lastNameInput: By.id('lname'),
     emailInput: By.id('emailadd'),
     passwordInput: By.id('pwd'),
+    loginbutton:By.id('loginbutton'),
     maleRadioButton: By.css('[for="male"]'),
     dobDay: By.id('date'),
     dobMonth: By.css('[name="month"]'),
